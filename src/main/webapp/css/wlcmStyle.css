@@ -1,0 +1,155 @@
+*{
+    scrollbar-width: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    margin: 0;
+    max-width: 100vw;
+    background-image: url(R.jpg);
+}
+
+/* Logo */
+
+.logo{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 128px;
+    height: 32px;
+    background-image: url(logo.png);
+    background-size: cover;
+    border: none;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* RIDO */
+
+.rido{
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-image: url(hello.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transition: transform 1s ease-out;
+    animation: descend 1s ease-in;
+}
+.monte{
+    transform: translateY(-100vh);
+}
+@keyframes descend {
+    from{transform: translateY(-100vh);}
+    to{transform: translateY(0);}
+}
+.b1{
+    width: 20vw;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #ffcc00;
+    margin-top: 50vh;
+    margin-left: 40vw;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+.b1:hover{
+    transform: translateY(-5px) scale(1.01);
+    background-color: #ffaa00;
+}
+.carousel{
+    position: relative;
+    overflow: hidden;
+    color: aliceblue;
+    font-size: larger;
+    font-weight: bold;
+    margin-top: 20vh;
+    min-height: 30px;
+    width: 40vw;
+    height: auto;
+    margin-left: 35vw;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.carousel:hover{
+    transform: scale(1.09);
+}
+.carousel-text{
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease;
+}
+.active{
+    opacity: 1;
+    transform: translateX(10px);
+}
+
+/* Body */
+
+.courses {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.courses h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: aliceblue;
+    transition: transform 0.3s ease;
+}
+.courses h2:hover{
+    transform: translateY(-5px) scale(1.09);
+}
+
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.course-card {
+    background: rgba(47, 79, 79, 0.5);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-card h3 {
+    margin-top: 0;
+    color: aliceblue;
+}
+
+.course-card p {
+    font-size: 0.9rem;
+    color: aliceblue;
+}
+
+/* BUTTON */
+
+.b2{
+    width: 20vw;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #ffcc00;
+    margin-top: 15vh;
+    margin-left: 40vw;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+.b2:hover{
+    transform: translateY(-5px) scale(1.01);
+    background-color: #ffaa00;
+}
